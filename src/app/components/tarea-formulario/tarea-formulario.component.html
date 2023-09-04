@@ -1,0 +1,33 @@
+  <form #form="ngForm" (ngSubmit)="onSubmit(titulo.value, descripcion.value, form)">
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Título</mat-label>
+      <input matInput [(ngModel)]="tareaTitulo" #titulo="ngModel" required name="titulo">
+      <mat-error *ngIf="titulo.invalid  && titulo.touched">
+        ¡El título es obligatorio!
+      </mat-error>
+    </mat-form-field>
+    
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Descripción</mat-label>
+      <textarea matInput [(ngModel)]="tareaDescripcion" #descripcion="ngModel" required name="descripcion"></textarea>
+      <mat-error *ngIf="descripcion.invalid && descripcion.touched">
+        ¡La descripción es obligatoria!
+      </mat-error>
+    </mat-form-field>
+    
+    <div class="action-buttons">
+      <button *ngIf="!tareaEnEdicion" mat-raised-button color="primary" type="submit">
+        <mat-icon >add</mat-icon>
+        Agregar
+    </button>
+    <button mat-raised-button color="warn" type="button" *ngIf="tareaEnEdicion" (click)="cancelarEdicion(form)">
+      <mat-icon>cancel</mat-icon>
+      Cancelar
+    </button>
+    <button mat-raised-button color="primary" type="submit" *ngIf="tareaEnEdicion">
+        <mat-icon>save</mat-icon>
+        Guardar Cambios
+    </button>
+    
+    </div>
+  </form>

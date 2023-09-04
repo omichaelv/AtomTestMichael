@@ -1,0 +1,14 @@
+<mat-card [ngClass]="{'completado': tarea.completado}">
+    <mat-card-content>
+      <mat-checkbox [(ngModel)]="tarea.completado" (change)="toggleCompletadoAction(tarea)">
+        {{ tarea.titulo }}
+      </mat-checkbox>
+      <p>{{ tarea.descripcion }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button color="primary" (click)="updateTareaAction(tarea)">
+        <mat-icon>edit</mat-icon> Editar</button>
+      <button mat-button color="warn" (click)="deleteTareaAction(tarea)">
+        <mat-icon>delete</mat-icon> Eliminar</button>
+    </mat-card-actions>
+  </mat-card>

@@ -1,0 +1,7 @@
+.completado {
+    background-color: lightgreen !important; /* El !important es para sobrescribir estilos de Material si es necesario */
+  }
+
+mat-card {
+    margin-bottom: 16px; /* O el espacio que prefieras */
+}

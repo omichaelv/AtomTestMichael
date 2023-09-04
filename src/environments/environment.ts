@@ -1,5 +1,5 @@
 export const environment = {
-    production: false,
+    production: true,
     title: 'Tasks - Local',
-    applicationApiUrl: ''
+    applicationApiUrl: 'https://us-central1-lista-de-tareas-9050c.cloudfunctions.net/app'
 };

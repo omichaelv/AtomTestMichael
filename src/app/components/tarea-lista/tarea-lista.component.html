@@ -1,0 +1,13 @@
+<div class="task-container">
+    <app-tarea-formulario (addTarea)="addTarea($event.titulo, $event.descripcion)" 
+                          (updateTarea)="editarTareaEnDB($event)" 
+                          [tareaEnEdicion]="tareaEnEdicion"></app-tarea-formulario>
+  
+    <div class="task-list">
+      <app-tarea (deleteTarea)="deleteTarea($event)" 
+                 (updateTarea)="updateTarea($event)"
+                 (toggleCompletado)="editarTareaEnDB($event)"
+                 *ngFor="let tarea of tareas" [tarea]="tarea">
+       </app-tarea>
+    </div>
+  </div>
