@@ -1,7 +1,7 @@
 <mat-card [ngClass]="{'completado': tarea.completado}">
     <mat-card-content>
       <mat-checkbox [(ngModel)]="tarea.completado" (change)="toggleCompletadoAction(tarea)">
-        {{ tarea.titulo }}
+        <b>{{ tarea.titulo }}</b>
       </mat-checkbox>
       <p>{{ tarea.descripcion }}</p>
     </mat-card-content>

@@ -10,3 +10,8 @@
   .task-list {
     margin-top: 16px;
   }
+
+  .task-list-scrollable {
+    max-height: 400px; /* O la altura que desees */
+    overflow-y: auto;
+  }

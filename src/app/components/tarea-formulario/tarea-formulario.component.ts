@@ -22,10 +22,7 @@ export class TareaFormularioComponent implements OnInit {
       this.updateTarea.emit(this.tareaEnEdicion);
       this.tareaEnEdicion = null;
   } else {
-    this.addTarea.emit({ 
-      titulo: this.tareaEnEdicion?.titulo || '', 
-      descripcion: this.tareaEnEdicion?.descripcion || '' 
-    });
+    this.addTarea.emit({ titulo, descripcion });
   }
   this.limpiarFormulario();
   form.resetForm();

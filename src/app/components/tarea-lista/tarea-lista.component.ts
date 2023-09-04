@@ -29,8 +29,8 @@ export class TareaListaComponent implements OnInit{
   }
 
   addTarea(titulo: string, descripcion: string): void {
-    titulo = titulo.trim();
-    descripcion = descripcion.trim();
+    titulo = titulo ? titulo.trim() : '';
+    descripcion = descripcion ? descripcion.trim() : '';
     if (!titulo || !descripcion) {  
       this.toastr.warning('¡Ambos campos deben estar llenos para agregar una tarea!');
       return; 

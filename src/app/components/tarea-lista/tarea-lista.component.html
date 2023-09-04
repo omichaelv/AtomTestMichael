@@ -3,7 +3,7 @@
                           (updateTarea)="editarTareaEnDB($event)" 
                           [tareaEnEdicion]="tareaEnEdicion"></app-tarea-formulario>
   
-    <div class="task-list">
+    <div class="task-list task-list-scrollable">
       <app-tarea (deleteTarea)="deleteTarea($event)" 
                  (updateTarea)="updateTarea($event)"
                  (toggleCompletado)="editarTareaEnDB($event)"
